@@ -11,6 +11,7 @@ import "vuetify/styles";
 import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
+import format from "./plugins/format";
 
 const vuetify = createVuetify({
   components,
@@ -22,6 +23,6 @@ const vuetify = createVuetify({
 
 const app = createApp(App);
 
-app.use(createPinia()).use(router).use(vuetify);
+app.use(createPinia()).use(router).use(vuetify).use(format);
 
 app.mount("#app");
